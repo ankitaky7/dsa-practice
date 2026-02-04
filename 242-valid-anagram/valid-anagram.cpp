@@ -2,15 +2,14 @@ class Solution {
 public:
     bool isAnagram(string s, string t) {
         if(s.size() != t.size()) return false;
-        map<int, int>mpp1;
-        map<int, int>mpp2;
+        int count[26] = {0};
         for(int i=0;i<s.size();i++){
-            mpp1[s[i]]++;    
+            count[s[i] - 'a']++;
+            count[t[i] - 'a']--;
         }
-        for(int i=0;i<s.size();i++){
-            mpp2[t[i]]++;
+        for(int i=0;i<26;i++){
+            if(count[i] != 0) return false;
         }
-        if(mpp1 == mpp2) return true;
-        return false;
+        return true;
     }
 };
