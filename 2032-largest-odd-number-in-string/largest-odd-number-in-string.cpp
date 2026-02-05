@@ -5,7 +5,7 @@ public:
         int idx = -1;
         string ans;
         for(int i=n-1;i>=0;i--){
-            if(((num[i] % 2) == 0) || (num[i] == 0)) {
+            if((((num[i] - '0') % 2) == 0)) {
                 continue;
             }else {
                 idx = i;
