@@ -32,7 +32,7 @@ public:
             if(temp2) temp2 = temp2->next;
         }
         if(carry){
-            ListNode* newNode = new ListNode(1);
+            ListNode* newNode = new ListNode(carry);
             curr->next = newNode;
         }
         return dummyNode->next;
