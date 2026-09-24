@@ -2,10 +2,9 @@ class Solution {
 public:
     int findMin(vector<int>& nums) {
         int mini = INT_MAX;
-        for(int i=0;i<nums.size();i++){
-            if(mini > nums[i]){
-                mini = nums[i];
-            }
+        int n = nums.size();
+        for (int i = 0; i < n; i++) {
+            mini = min(nums[i], mini);
         }
         return mini;
     }
